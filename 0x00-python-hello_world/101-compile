@@ -1,0 +1,15 @@
+#!/bin/bash
+import sys
+
+# Get the Python file name from the environment variable
+pyfile = sys.getenv("PYFILE")
+
+# Get the output filename
+pyfilec = pyfile + "c"
+
+# Compile the Python file
+python -m py_compile "$pyfile"
+
+# Print a success message
+print("Successfully compiled {} to {}".format(pyfile, pyfilec))
+
