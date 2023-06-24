@@ -1,32 +1,33 @@
 #!/usr/bin/python3
+"""
+Testing Python Docstrings
+"""
 
-"""creating a class """
 
 class Square:
-    """creating a attribute"""
-    __size = 0
-    """creating a property getter"""
-    @property
-    def size(self):
-        return self.__size
-    
-
-    """creating the property setter"""
-
-
-    def size(self, value):
-        if not isinstance(value, int):
-            raise TypeError("size must be an integers")
-        if value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
+    """
+    class has a size private instance property
+    """
 
     def __init__(self, size=0):
-        if  not isinstance(size, int):
-            raise TypeError("size must be an integers")
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
+
+    @property
+    def size(self):
+        """int: returns the size of the square"""
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
 
     def area(self):
         return self.__size ** 2
