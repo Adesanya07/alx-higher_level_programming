@@ -4,6 +4,18 @@
 
 class Rectangle:
     """class module."""
+
+    def __init__(self, width=0, height=0):
+        """ Method that initializes the instance
+
+        Args:
+            width: width of the rectangle
+            height: height of the rectangle
+
+
+        """
+        self.width = width
+        self.height = height
     @property
     def width(self):
         return self.__width
