@@ -1,6 +1,8 @@
 #!/usr/bin/node
 
-function argument () {
+const process = require("process");
+
+const args = process.argv.slice(2);
     if (argument.length === 0){
         console.log("No argument");
     }
@@ -10,4 +12,3 @@ function argument () {
     else{
         console.log("Argument found");
     }
-}
