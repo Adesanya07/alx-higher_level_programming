@@ -1,6 +1,5 @@
 #!/usr/bin/node
+const argv0 = process.argv[2];
+const argv1 = process.argv[3];
 
-const args = process.argv.slice(2);
-
-const firstArg = args[0];
-const secondArg = args[1];
+console.log(`${argv0} is ${argv1}`);
